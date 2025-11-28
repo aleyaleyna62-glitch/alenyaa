@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Aleyna Günay – Kişisel Web Sitem</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="font-family:Arial,sans-serif; margin:0; background:#d0eaff; color:#222; cursor:url('https://cur.cursors-4u.net/cursors/cur-11/cur1077.cur'), auto;">
+
+<!-- Header -->
+<header style="background:#3399ff; padding:12px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+  <div style="flex:1;">
+    <marquee id="marquee" behavior="scroll" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+      <span style="font-weight:bold; font-size:1.6rem;">Aleyna</span>
+      <span style="font-weight:bold; font-size:1.6rem;"> Günay</span>
+      <span style="font-weight:bold; font-size:1.6rem;"> – Kişisel</span>
+      <span style="font-weight:bold; font-size:1.6rem;"> Web Sitem</span>
+    </marquee>
+  </div>
+  <nav>
+    <a href="index.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">Ana Sayfa</a>
+    <a href="hakkimda.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">Hakkımda</a>
+    <a href="projeler.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">Projeler</a>
+    <a href="iletisim.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">İletişim</a>
+    <a href="kaynaklar.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">Kaynaklar</a>
+  </nav>
+</header>
+
+<!-- Ana içerik -->
+<div style="background:#fff; padding:30px; border-radius:15px; margin:20px auto; max-width:900px; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+
+  <h1 style="font-size:2.2rem; margin-bottom:15px; text-align:center;">Hoş Geldiniz!</h1>
+  <p style="font-size:1.15rem; line-height:1.7; text-align:center; margin-bottom:30px;">
+    Ben <strong>Aleyna Günay</strong>, 17 yaşında 11. sınıf bilişim öğrencisiyim. Bu site okul ödevim kapsamında hazırlandı ve burada geliştirdiğim projeleri, kullandığım teknolojileri ve yaptığım çalışmaların detaylarını bulabilirsiniz.
+  </p>
+
+  <h2 style="font-size:1.6rem; margin-bottom:15px;">Eğitim ve Deneyimler</h2>
+  <ul style="font-size:1.1rem; line-height:1.6; margin-left:25px; margin-bottom:25px;">
+    <li>11. sınıf bilişim öğrencisi olarak temel programlama ve web tasarım bilgisine sahibim.</li>
+    <li>Python ile otomasyon, basit oyun ve hesap makinesi projeleri geliştirdim.</li>
+    <li>HTML ve JavaScript kullanarak interaktif web sayfaları hazırladım.</li>
+    <li>Arduino ve elektronik devreler ile mini projeler ürettim.</li>
+    <li>Problem çözme ve algoritma geliştirme konularında deneyim kazandım.</li>
+  </ul>
+
+  <h2 style="font-size:1.6rem; margin-bottom:15px;">Projelerimden Örnekler</h2>
+  <ul style="font-size:1.1rem; line-height:1.6; margin-left:25px; margin-bottom:25px;">
+    <li><strong>HTML Web Sitesi:</strong> Bu site okul ödevi olarak hazırlandı ve tüm sayfalar HTML ile tasarlandı.</li>
+    <li><strong>Python Hesap Makinesi:</strong> Basit toplama, çıkarma, çarpma ve bölme işlemleri yapıyor.</li>
+    <li><strong>JavaScript Mini Oyun:</strong> Kullanıcı interaktif bir şekilde skor toplayabiliyor.</li>
+    <li><strong>Arduino LED Devresi:</strong> LED ışıkları yakıp söndürerek temel elektronik bilgilerini uyguladım.</li>
+  </ul>
+
+  <!-- Döviz ve Hava Durumu -->
+  <h2 style="font-size:1.6rem; margin-bottom:15px;">Döviz Kurları ve Hava Durumu</h2>
+  <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
+
+    <div style="flex:1 1 250px; background:#e6f2ff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.08); text-align:center;">
+      <h3>Döviz Kurları</h3>
+      <ul style="list-style:none; padding:0; font-size:1.1rem;">
+        <li>USD: 27,50 ₺</li>
+        <li>EUR: 29,80 ₺</li>
+        <li>GBP: 34,20 ₺</li>
+      </ul>
+    </div>
+
+    <div style="flex:1 1 250px; background:#e6f2ff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.08); text-align:center;">
+      <h3>Hava Durumu</h3>
+      <img id="havaIcon" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Weather_sun_icon.png" alt="Hava Durumu" style="width:80px; height:80px; margin-bottom:10px;">
+      <p id="havaText" style="font-size:1.1rem;">İstanbul: 18°C, Güneşli</p>
+    </div>
+
+  </div>
+</div>
+
+<footer style="text-align:center; padding:20px; color:#555; border-top:1px solid #ccc;">
+© <span id="yil"></span> Aleyna Günay
+</footer>
+
+<script>
+let colors = ["#0066cc","#3399ff","#66b3ff","#99ccff"];
+let current = 0;
+function changeColor() {
+  const spans = document.querySelectorAll("#marquee span");
+  spans.forEach(span => span.style.color = colors[current]);
+  current = (current + 1) % colors.length;
+}
+setInterval(changeColor,1000);
+document.getElementById('yil').textContent = new Date().getFullYear();
+
+// Dinamik hava durumu simgeleri
+let havaDurumlari = [
+  {icon:"https://upload.wikimedia.org/wikipedia/commons/1/15/Weather_sun_icon.png", text:"İstanbul: 18°C, Güneşli"},
+  {icon:"https://upload.wikimedia.org/wikipedia/commons/f/f4/Weather_clouds_icon.png", text:"İstanbul: 16°C, Bulutlu"},
+  {icon:"https://upload.wikimedia.org/wikipedia/commons/5/5e/Weather_rain_icon.png", text:"İstanbul: 17°C, Hafif Yağmurlu"},
+  {icon:"https://upload.wikimedia.org/wikipedia/commons/e/ef/Weather_storm_icon.png", text:"İstanbul: 15°C, Yağmurlu"}
+];
+let index = 0;
+function degistirHava() {
+  document.getElementById('havaIcon').src = havaDurumlari[index].icon;
+  document.getElementById('havaText').textContent = havaDurumlari[index].text;
+  index = (index + 1) % havaDurumlari.length;
+}
+setInterval(degistirHava,3000);
+</script>
+
+</body>
+</html>

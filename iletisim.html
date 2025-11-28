@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>İletişim — Aleyna Günay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="font-family:Arial,sans-serif; margin:0; background:#d0eaff; color:#222; cursor:url('https://cur.cursors-4u.net/cursors/cur-11/cur1077.cur'), auto;">
+
+<header style="background:#3399ff; color:#fff; padding:12px; display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center;">
+  <div style="font-weight:bold; font-size:1.4rem;">İletişim</div>
+  <nav>
+    <a href="index.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">Ana Sayfa</a>
+    <a href="hakkimda.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">Hakkımda</a>
+    <a href="projeler.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">Projeler</a>
+    <a href="iletisim.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">İletişim</a>
+    <a href="kaynaklar.html" style="color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;">Kaynaklar</a>
+  </nav>
+</header>
+
+<div style="background:#fff; padding:25px; border-radius:12px; margin:20px auto; max-width:800px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+
+  <h1 style="font-size:2rem; margin-bottom:15px;">İletişim</h1>
+  <p style="font-size:1.1rem; line-height:1.6;">
+    Bana aşağıdaki form veya alternatif yollarla ulaşabilirsiniz:
+  </p>
+
+  <form action="mailto:aleyaleyna62@gmail.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:10px; max-width:400px; margin:auto;">
+    <input type="text" name="isim" placeholder="Adınız" required style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1rem;">
+    <input type="email" name="email" placeholder="Emailiniz" required style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1rem;">
+    <textarea name="mesaj" placeholder="Mesajınız" rows="5" required style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1rem;"></textarea>
+    <button type="submit" style="padding:10px; background:#3399ff; color:#fff; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">Gönder</button>
+  </form>
+
+  <h2 style="font-size:1.3rem; margin-top:20px;">Alternatif İletişim</h2>
+  <p style="font-size:1.1rem;">Telefon: <strong>5510819083</strong></p>
+  <p style="font-size:1.1rem;">Email: <strong>aleyaleyna62@gmail.com</strong></p>
+
+</div>
+
+<footer style="text-align:center; padding:20px; color:#555; border-top:1px solid #ccc;">
+© <span id="yil4"></span> Aleyna Günay
+</footer>
+
+<script>
+document.getElementById('yil4').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
